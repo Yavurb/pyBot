@@ -1,6 +1,6 @@
 import time
 
-async def ping(message, client):
+async def ping(message, args, client):
   before = time.monotonic()
   message = await message.channel.send("Pong!")
   ping = (time.monotonic() - before) * 1000
