@@ -1,10 +1,10 @@
-from os import listdir
-from os import walk
-from pathlib import Path
+import os
 
 async def help(message, args, client):
-  command_path = Path(__file__).parent.resolve()
-  (_,_, filenames) = walk(command_path).__next__()
+  file_path = os.path.abspath(__file__)
+  dir_path = os.path.dirname(file_path)
+
+  filenames = os.listdir(dir_path)
 
   commands = []
   for file in filenames:
