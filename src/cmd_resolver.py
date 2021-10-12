@@ -1,8 +1,5 @@
 import importlib
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 # * Envs
 PREFIX = os.environ.get('PREFIX', '$')
