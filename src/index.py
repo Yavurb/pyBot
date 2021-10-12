@@ -3,11 +3,7 @@ import discord
 import os
 
 # * Importing specific modules
-from dotenv import load_dotenv
 from cmd_resolver import *
-
-# * load envs
-load_dotenv()
 
 # Envs
 API_KEY = os.getenv('API_KEY')
