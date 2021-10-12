@@ -3,6 +3,9 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+[scripts]
+'dev' = "nodemon --exec python3.9 src/index.py"
+
 [packages]
 aiohttp = "==3.7.4.post0"
 async-timeout = "==3.0.1"
