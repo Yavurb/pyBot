@@ -1,3 +1,6 @@
+# description => Shows the message's ping
+# options => []
+
 import time
 
 async def ping(message, args, client):
