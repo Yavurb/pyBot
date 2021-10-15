@@ -15,6 +15,8 @@ async def help(message, args, client):
 
   with os.scandir(dir_path) as entries:
     for entry in entries:
+      if entry.is_dir():
+        continue
 
       entry_path = os.path.join(dir_path, entry)
 
