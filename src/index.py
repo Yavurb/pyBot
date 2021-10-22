@@ -15,13 +15,13 @@ def main():
   @bot.event
   async def on_ready():
     print(f'Logged on as {bot.user}')
+    await cmd_resolver(bot)
 
   @bot.event
-  async def on_message(message):
-    if message.author == bot.user:
-      return
+  async def on_command_error(ctx, exception):
+    print(exception)
+    print(ctx)
 
-    await cmd_resolver(message, bot)
 
   bot.run(API_KEY)
 
