@@ -2,14 +2,14 @@ import importlib
 import os
 
 # * Envs
-PREFIX = os.environ.get('PREFIX', '$')
+CMD_PREFIX = os.environ.get('PREFIX', '$')
 
 async def cmd_resolver(message, client):
   try:
-    if not message.content.startswith(PREFIX):
+    if not message.content.startswith(CMD_PREFIX):
       return
 
-    args = message.content[len(PREFIX):].split(' ')
+    args = message.content[len(CMD_PREFIX):].split(' ')
     command = args.pop(0)
 
     module = importlib.import_module(f'commands.{command}')
