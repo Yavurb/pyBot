@@ -10,7 +10,9 @@ class Util(commands.Cog):
     self.bot = bot
 
   @commands.command()
-  async def ping(self, ctx):
+  async def ping(self, ctx, ):
+    '''Shows the message's ping'''
+
     before = time.monotonic()
     message = await ctx.send("Pong!")
     ping = (time.monotonic() - before) * 1000
