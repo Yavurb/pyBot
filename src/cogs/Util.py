@@ -16,3 +16,7 @@ class Util(commands.Cog):
     ping = (time.monotonic() - before) * 1000
     await message.edit(content=f"Pong 🏓 \n`ping took {int(ping)}ms`")
     print(f'Ping  {int(ping)}ms')
+
+
+def setup(bot) -> None:
+  bot.add_cog(Util(bot))
