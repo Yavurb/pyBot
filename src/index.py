@@ -3,7 +3,7 @@ from discord.ext import commands
 import os
 
 # * Importing specific modules
-from cmd_resolver import *
+from bot_loader import *
 
 # Envs
 API_KEY = os.getenv('API_KEY')
@@ -15,7 +15,7 @@ def main():
   @bot.event
   async def on_ready():
     print(f'Logged on as {bot.user}')
-    await cmd_resolver(bot)
+    await bot_loader(bot)
 
   @bot.event
   async def on_command_error(ctx, exception):

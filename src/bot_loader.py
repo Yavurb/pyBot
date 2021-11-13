@@ -1,6 +1,6 @@
 import os
 
-async def cmd_resolver(bot):
+async def bot_loader(bot):
     for filename in os.listdir('./src/cogs'):
       try:
         if filename.endswith('.py'):
