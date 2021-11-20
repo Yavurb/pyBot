@@ -88,6 +88,8 @@ class HelpCommand(commands.MinimalHelpCommand):
 
 
 class Help(commands.Cog):
+  """Shows a brief summary of commands ordered by category"""
+
   def __init__(self, bot):
     bot._original_help_command = bot.help_command
     bot.help_command = HelpCommand()

@@ -4,6 +4,8 @@ import time
 
 
 class Util(commands.Cog):
+  """Helpful commands for everyday use"""
+
   def __init__(self, bot) -> None:
     self.bot = bot
 
