@@ -1,9 +1,9 @@
 import os
 
 async def bot_loader(bot):
-    for filename in os.listdir('./src/cogs'):
+    for folder in os.listdir('./src/cogs'):
       try:
-        if filename.endswith('.py'):
-          bot.load_extension(f'cogs.{filename[:-3]}')
-      except:
-        print(f'Failed to load cog {filename[:-3]}.')
+        if os.path.exists(os.path.join("./src/cogs", folder, "cog.py")):
+          bot.load_extension(f"cogs.{folder}.cog")
+      except Exception as e:
+        print(f"{folder} failed to load: {e}")
